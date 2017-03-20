@@ -13,16 +13,12 @@ plot(xCircle, yCircle);
 scatter(xCircle, ynCircle);
 plot(xCircle, ynCircle);
 title('Matrix transform of the unit circle');
-
 for n = 1:length(xCircle)
     z = A*[xCircle(n) yCircle(n)]';
     zn = A*[xCircle(n) ynCircle(n)]';
     scatter(z(1), z(2));
     scatter(zn(1), zn(2));
-    plot([xCircle(n) z(1)], [yCircle(n) z(2)]);
-    plot([xCircle(n) zn(1)], [ynCircle(n) zn(2)], '--');
 end
-
 figure
 hold on
 axis equal
@@ -40,19 +36,14 @@ scatter(ySquare, xSquare); %Right vertical
 plot(ySquare, xSquare);
 scatter(zeroVals, xSquare); %Left vertical
 plot(zeroVals, xSquare);
-
 for n = 1:length(xSquare)
     zTopH = A*[xSquare(n) 1]'; %Top horizontal
     scatter(zTopH(1), zTopH(2));
-    plot([xSquare(n) zTopH(1)], [1 zTopH(2)]);
     zBottomH = A*[xSquare(n) 0]'; %Bottom horizontal
     scatter(zBottomH(1), zBottomH(2));
-    plot([xSquare(n) zBottomH(1)], [0 zBottomH(2)]);
     zRightV = A*[1 xSquare(n)]'; %Right vertical
     scatter(zRightV(1), zRightV(2));
-    plot([1 zRightV(1)], [xSquare(n) zRightV(2)]);
     zLeftV = A*[0 xSquare(n)]'; %Left vertical
     scatter(zLeftV(1), zLeftV(2));
-    plot([0 zLeftV(1)], [xSquare(n) zLeftV(2)]);
 end
 hold off
