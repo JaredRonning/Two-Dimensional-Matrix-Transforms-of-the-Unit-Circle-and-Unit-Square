@@ -1,6 +1,6 @@
 A = input('Enter your 2 by 2 matrix. Example: [1 2; -3 1]: ');
 while (length(A(1,:)) ~= 2 || length(A(:,1)) ~= 2)
-A = input('Enter your 2 by 2 matrix. Example: [1 2; -3 1]: ');
+    A = input('Enter your 2 by 2 matrix. Example: [1 2; -3 1]: ');
 end
 
 xCircle = [-1:0.02:-0.94 -0.94:0.08:0.94 0.94:0.02:1]; %Fill in points near +/- 1
